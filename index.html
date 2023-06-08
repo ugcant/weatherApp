@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+   <link rel="shortcut icon" href="/src/img/favicon/favicon.ico" type="image/x-icon">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/src/styles/normalize-min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/styles/app.css" />
+    <!-- Custom JS -->
+    <script src="/src/scripts/app.js" defer></script>
+    <!-- Fontawesome JS -->
+    <script
+      src="https://kit.fontawesome.com/c07e9de907.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>weatherApp - ugcant</title>
+  </head>
+  <body onload="getWeatherDailyData()">
+    <header>
+      <h1><span class="nickname">ugcant</span>Weather.</h1>
+    </header>
+    <main>
+      <section class="weather-input">
+        <form>
+          <input
+            type="text"
+            name="city-input"
+            id="city-input"
+            placeholder="Enter a city name"
+          />
+          <button id="btn-submit" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button id="btn-locate" type="button">
+            <i class="fa-solid fa-location-crosshairs"></i>
+          </button>
+        </form>
+      </section>
+      <section class="weather-today">
+        <div class="weather-today-container">
+          <div class="weather-today__card">
+            <p class="weather-today__date">
+              <img src="/src/img/icons8-date-100.png" alt="calender">
+              <span class="date-info"></span>
+            </p>
+            <p class="weather-today__city">
+              <img src="/src/img/icons8-location-100.png" alt="location">
+              <span id="city-info"></span>
+            </p>
+            <div class="borderline"></div>
+            <div class="weather-icon">
+            </div>
+            <p class="weather-today__temperature">
+              <span id="weather-detail__value"></span>&deg;C
+            </p>
+            <p class="weather-today__condition"></p>
+          </div>
+          <div class="weather-detail__card first">
+            <img src="/src/img/icons8-windsock-100.png" class="box-icon" alt="wind-speed">
+            <div class="weather-box">
+              <h4 class="weather-detail__header">Wind Speed</h4>
+              <h4 class="weather-detail__value wind-speed"></h4>
+            </div>
+          </div>
+          <div class="weather-detail__card second">
+            <img src="/src/img/icons8-hygrometer-100.png" class="box-icon" alt="Humidity">
+            <div class="weather-box">
+              <h4 class="weather-detail__header">Humidity</h4>
+              <h4 class="weather-detail__value humidity-value"></h4>
+            </div>
+          </div>
+          <div class="weather-detail__card third">
+            <img src="/src/img/icons8-pressure-gauge-100.png" class="box-icon" alt="Pressure">
+            <div class="weather-box">
+              <h4 class="weather-detail__header">Pressure</h4>
+              <h4 class="weather-detail__value pressure-value"></h4>
+            </div>
+          </div>
+          <div class="weather-detail__card fourth">
+            <img src="/src/img/icons8-visibility-100.png" class="box-icon" alt="Visibility">
+            <div class="weather-box">
+              <h4 class="weather-detail__header">Visibility</h4>
+              <h4 class="weather-detail__value visibility-value"></h4>
+            </div>
+          </div>
+          <div class="weather-detail__card fifth">
+            <img src="/src/img/icons8-sunrise-100.png" class="box-icon" alt="Sunrise">
+            <div class="weather-box">
+              <h4 class="weather-detail__header">Sunrise</h4>
+              <h4 class="weather-detail__value sunrise-value"></h4>
+            </div>
+          </div>
+          <div class="weather-detail__card sixth">
+            <img src="/src/img/icons8-sunset-100.png" class="box-icon" alt="Sunset">
+            <div class="weather-box">
+              <h4 class="weather-detail__header">Sunset</h4>
+              <h4 class="weather-detail__value sunset-value"></h4>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      
+      </section>
+    </main>
+    <footer>
+      <p>made by <a href="https://github.com/ugcant">ugcant</a></p>
+    </footer>
+  </body>
+</html>
